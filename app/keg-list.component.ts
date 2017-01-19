@@ -15,7 +15,7 @@ import { Keg } from './keg.model';
     <h5>{{currentKeg.name}}</h5>
     <p>{{currentKeg.brand}}</p>
     <p [class]="priceColor(currentKeg)">$ {{currentKeg.price}}</p>
-    <p>{{currentKeg.alcoholContent}}%</p>
+    <p>{{currentKeg.alcoholContent}}% <i [class]="warningAlcohol(currentKeg)"></i></p>
     <p>{{currentKeg.pints}} pints</p>
     <button (click)="editKeg(currentKeg)" class="btn">Edit</button>
     <button (click)="sellPint(currentKeg)" class="btn">Sell Pint</button>
@@ -37,6 +37,12 @@ export class KegListComponent {
   }
 
   filterByQuantity: string = "allKegs";
+
+  warningAlcohol(currentKeg) {
+    if (currentKeg.alcoholContent >= 7.5) {
+      return "fa fa-warning"
+    }
+  }
 
   editKeg(kegToEdit: Keg) {
     this.clickSender.emit(kegToEdit);
