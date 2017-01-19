@@ -8,7 +8,7 @@ import { Keg } from './keg.model';
     <h5>{{currentKeg.name}}</h5>
     <p>{{currentKeg.brand}}</p>
     <p>$ {{currentKeg.price}}</p>
-    <p>{{currentKeg.alcoholContent}}</p>
+    <p>{{currentKeg.alcoholContent}}%</p>
     <p>{{currentKeg.pints}} pints</p>
     <button (click)="editKeg(currentKeg)" class="btn">Edit</button>
     <button (click)="sellPint(currentKeg)" class="btn">Sell Pint</button>

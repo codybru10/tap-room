@@ -12,7 +12,6 @@ import { Keg } from './keg.model';
     <hr>
     <new-keg (addBeer)="addKeg($event)"></new-keg>
     <edit-keg [childSelectedKeg]="selectedKeg" (clickDone)="finishedEditing()"></edit-keg>
-    <sell-pint></sell-pint>
   </div>
   `
 })
@@ -24,9 +23,9 @@ export class AppComponent {
   year = this.currentDate.getFullYear();
 
   masterKegList: Keg[] = [
-    new Keg('Busch Light', 'Anheuser-Busch', 2, '4%'),
-    new Keg('Bud Light', 'Anheuser-Busch', 3, '4%'),
-    new Keg('Budwieser', 'Anheuser-Busch', 3, '4%')
+    new Keg('Busch Light', 'Anheuser-Busch', 2, 3.9),
+    new Keg('Bud Light', 'Anheuser-Busch', 3, 4),
+    new Keg('Budwieser', 'Anheuser-Busch', 3, 4)
   ];
 
   selectedKeg = null;

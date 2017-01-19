@@ -5,7 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { KegListComponent } from './keg-list.component';
 import { EditKegComponent } from './edit-keg.component';
 import { NewKegComponent } from './new-keg.component';
-import { SellPintComponent } from './sell-pint.component';
+import { QuantityPipe } from './quantity.pipe';
+
 
 @NgModule({
   imports: [ BrowserModule,
@@ -14,7 +15,7 @@ import { SellPintComponent } from './sell-pint.component';
                   KegListComponent,
                   EditKegComponent,
                   NewKegComponent,
-                  SellPintComponent],
+                  QuantityPipe],
   bootstrap:    [ AppComponent ]
 })
 
