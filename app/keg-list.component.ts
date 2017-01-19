@@ -11,6 +11,7 @@ import { Keg } from './keg.model';
     <p>{{currentKeg.alcoholContent}}</p>
     <p>{{currentKeg.pints}} pints</p>
     <button (click)="editKeg(currentKeg)" class="btn">Edit</button>
+    <button (click)="sellPint(currentKeg)" class="btn">Sell Pint</button>
   </div>
   `
 })
@@ -18,8 +19,13 @@ import { Keg } from './keg.model';
 export class KegListComponent {
   @Input() childKegList: Keg[];
   @Output() clickSender = new EventEmitter();
+  @Output() sellKeg = new EventEmitter();
 
   editKeg(kegToEdit: Keg) {
     this.clickSender.emit(kegToEdit);
+  }
+
+  sellPint(kegToSell: Keg) {
+    this.sellKeg.emit(kegToSell);
   }
 }
