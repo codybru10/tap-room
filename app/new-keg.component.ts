@@ -22,7 +22,7 @@ import { Keg } from './keg.model';
 export class NewKegComponent {
   @Output() addBeer = new EventEmitter();
 
-  submitNewBeer(name: string, brand: string, price: number, alcoholContent: string){
+  submitNewBeer(name: string, brand: string, price: number, alcoholContent: number){
     var newKegToAdd: Keg = new Keg(name, brand, price, alcoholContent);
     this.addBeer.emit(newKegToAdd);
   }
