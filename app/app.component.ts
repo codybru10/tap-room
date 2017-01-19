@@ -25,7 +25,8 @@ export class AppComponent {
   masterKegList: Keg[] = [
     new Keg('Busch Light', 'Anheuser-Busch', 2, 3.9),
     new Keg('Bud Light', 'Anheuser-Busch', 3, 4),
-    new Keg('Budwieser', 'Anheuser-Busch', 3, 4)
+    new Keg('Rumpkin', 'Avery Brewing', 7, 18.53),
+    new Keg('120 Minutes IPA', 'Dogfish Head', 8, 18)
   ];
 
   selectedKeg = null;
