@@ -10,7 +10,7 @@ import { Keg } from './keg.model';
     <keg-list [childKegList]="masterKegList" (clickSender)="editKeg($event)"></keg-list>
     <br>
     <hr>
-    <edit-keg [childSelectedKeg]="selectedKeg"></edit-keg>
+    <edit-keg [childSelectedKeg]="selectedKeg" (clickDone)="finishedEditing()"></edit-keg>
   </div>
   `
 })
