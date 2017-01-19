@@ -4,12 +4,13 @@ import { Keg } from './keg.model';
 @Component({
   selector: 'keg-list',
   template:`
-  <select (change)="onChange($event.target.value)">
+
+  <select (change)="onChange($event.target.value)" class="browser-default">
     <option value="allKegs" selected="selected">All Kegs</option>
     <option value="fullKegs">Full Kegs</option>
     <option value="lowKegs">Kegs Near Empty</option>
   </select>
-
+  <br>
   <div *ngFor="let currentKeg of childKegList | quantity:filterByQuantity" class="well">
     <h5>{{currentKeg.name}}</h5>
     <p>{{currentKeg.brand}}</p>

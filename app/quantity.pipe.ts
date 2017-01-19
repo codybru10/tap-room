@@ -18,7 +18,7 @@ export class QuantityPipe implements PipeTransform {
     return output;
   } else if (quantity === "lowKegs") {
     for (var i = 0; i < input.length; i++) {
-      if (input[i].pints === 120) {
+      if (input[i].pints <= 120) {
         output.push(input[i]);
       }
     }
