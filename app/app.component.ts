@@ -10,6 +10,7 @@ import { Keg } from './keg.model';
     <keg-list [childKegList]="masterKegList" (clickSender)="editKeg($event)"></keg-list>
     <br>
     <hr>
+    <new-keg (addBeer)="addKeg($event)"></new-keg>
     <edit-keg [childSelectedKeg]="selectedKeg" (clickDone)="finishedEditing()"></edit-keg>
   </div>
   `
@@ -35,6 +36,10 @@ export class AppComponent {
 
   editKeg(clickedKeg) {
     this.selectedKeg = clickedKeg;
+  }
+
+  addKeg(newKeg: Keg) {
+    this.masterKegList.push(newKeg);
   }
 
 
