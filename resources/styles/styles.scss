@@ -1,5 +1,5 @@
 body {
-  background: url("https://images.unsplash.com/photo-1436076863939-06870fe779c2?dpr=1&auto=format&fit=crop&w=1920&h=1080&q=80&cs=tinysrgb&crop=") fixed;
+  background: url("../../resources/img/background.jpg") fixed;
   background-size: cover;
   }
 html {
@@ -8,8 +8,10 @@ html {
 
 .well {
   box-shadow: 0 0 15px 1px black;
+  background:rgba(255,255,255,0.7);
 }
 
 select {
   box-shadow: 0 0 15px 1px black;
+  background:rgba(255,255,255,0.7);
 }
